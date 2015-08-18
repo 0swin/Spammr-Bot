@@ -35,7 +35,7 @@ def command_tweet(tweet):
     twText = twText.replace("/tweet ", "")
     if registeredUser:
         if len(twText) <= 140 and registeredUser:
-            # twitter.update_status(status=twText)
+            twitter.update_status(status=twText)
             telegram.send_message(tgChatID, "Tweet successful")
             print "Tweet successful"
         else:
